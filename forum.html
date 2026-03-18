@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forum</title>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;"> Forum </h1>
+            <hr>
+        </header>
+        <nav>
+            <a href="cv_sivu.html"> CV sivulle... </a>
+            <a href="index.html"> Pääsivulle... </a>
+            <a href="tyokoke.html"> Työkokemus sivulle... </a>
+        </nav>
+        <main>
+            <section>
+                <h2> Kommentti ...</h2>
+                
+                <form id="postCommentForm">
+                    <div style="text-align: end; width: 50%;">
+                        <label for="commentHeader"> otsikko: </label>
+                        <input required type="text" name="commentHeader" id="commentHeader" style="width: 60%; margin: 1%;" placeholder="...">
+                        <br>
+                        <label for="commentContent"> viesti: </label>
+                        <textarea required name="commentContent" id="commentContent" style="width: 60%; margin: 1%" placeholder="..."></textarea>
+                        <br>
+                        <label for="commentTypeSel"> kommentin tyyppi: </label>
+                        <select name="commentTypeSel" id="commentTypeSel">
+                            <option value="kysyy">kysymys</option>
+                            <option value="kommentoi">kommentti</option>
+                        </select>
+                        <hr>
+                    </div>
+                    <label for="userEmail"> email:</label>
+                    <input required type="text" name="userEmail" id="userEmail" placeholder="example@edu.turku.fi">
+                    <br>
+                    <label for="userBirthday">syntymäpäivä:</label>
+                    <input required type="date" name="userBirthday"> 
+                    <br>
+                    <label for="advertAgree"> Suostutko, että keskusteluun annettuja tietoja saa käyttää markkinoinnissa? : </label>
+                    <input required type="checkbox" name="advertAgree">
+                    <br>
+                    <button type="submit" style="margin-top: 5px;"> lähetä kommentti</button>
+                </form>
+                <hr>
+            </section>
+            <section>
+                <h2>Kommentit:</h2>
+                <div id="comments">
+                    <p> 12.2.2026 klo 12.12.32 - 4chanVelimatti@edu.turku.fi kommentoi: </p>
+                    <div style="border: 2px solid #676767; padding: 5px;">
+                        <h3> moi </h3>
+                        <p> eihän tää oo 4chan </p>
+                    </div>
+                    <hr>
+                    <p> 18.2.2026 klo 16.54.53 - pelokas.pete@edu.turku.fi kysyy: </p>
+                    <div style="border: 2px solid #676767; padding: 5px;">
+                        <h3> pelottaa </h3>
+                        <p> missä kaikki </p>
+                    </div>
+                    <hr>
+                    <p> 19.2.2026 klo 17.21.20 - broidibroileri@edu.turku.fi kommentoi: </p>
+                    <div style="border: 2px solid #676767; padding: 5px;">
+                        <h3> idk veli </h3>
+                        <p> ehkä kaikki delas tai meni 4chaniin </p>
+                    </div>
+                    <hr>
+                    <p> 10.3.2026 klo 23.32.44 - lehto.marja@edu.turku.fi kysyy: </p>
+                    <div style="border: 2px solid #676767; padding: 5px;">
+                        <h3> 4chan? </h3>
+                        <p> mikä on 4chan ???? </p>
+                    </div>
+                    <hr>
+                    <p> 18.3.2026 klo 05.51.00 - ts.tuff.ngl.sigma@edu.turku.fi kommentoi: </p>
+                    <div style="border: 2px solid #676767; padding: 5px;">
+                        <h3> 4chan != sigma </h3>
+                        <p> 4chan on joku netti forum jossa outoo poruukkaa !!!</p>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+        </main>
+        <script>
+            document.getElementById("postCommentForm").addEventListener("submit", function(e) {
+                e.preventDefault(); // Stop form from submitting normally
+
+                const date = new Date();
+
+                const commentArea = document.getElementById("comments");
+
+                const comHead = document.getElementById("commentHeader").value;
+                const comCont = document.getElementById("commentContent").value;
+                const comType = document.getElementById("commentTypeSel").value;
+
+                const userEmail = document.getElementById("userEmail").value;
+
+                commentArea.innerHTML += `
+                    <p> ${(date.toLocaleString('fi-FI'))} - ${userEmail} ${comType}: </p>
+                    <div style="border: 2px solid #676767; padding: 5px;">
+                        <h3> ${comHead} </h3>
+                        <p> ${comCont} </p>
+                    </div>
+                    <hr>
+                    `;
+            });
+        </script>
+    </body>
+</html>
