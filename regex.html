@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Regex </title>
+    </head>
+    <body>
+        <form>
+            <label for="plate">Rekisterikilpi</label>
+            <input type="text" id="plate" name="plate"
+            pattern="[A-Ö]{3}-[0-9]{3}" placeholder="ABC-123">
+            <br>
+            <label for="socialsec">Henkilötunnus</label>
+            <input type="text" id="socialsec" name="socialsec"
+            pattern="[0-9]{6}([\-]{1}|[A]{1})[0-9]{3}[A-Ö]{1}" placeholder="000199-001A">
+            <br>
+            <label for="date">Päivämäärä</label>
+            <input type="text" id="date" name="date"
+            pattern="[0-9]{1,2}\.(([0-9]{1,2}\.[0-9]{4})|([a-öA-Ö]{1,} [0-9]{4}))" placeholder="5.6.2026">
+            <br>
+            <br>
+            <br>
+            <button type="submit">Lähetä</button>
+            
+        </form>
+    </body>
+</html>
