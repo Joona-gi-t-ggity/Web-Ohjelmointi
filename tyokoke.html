@@ -17,8 +17,10 @@
             <a href="tyokoke.html"> Tylkokemus sivulle... </a>
             <a href="main.html"> Portfolioon..? </a>
         </nav>
+        <hr>
         <main>
-            <section>
+            <button command="show-modal" commandfor="cafeDia">Kahvila 2024 & 2025</button>
+            <dialog id="cafeDia">
                 <h2> ~Kahvila </h2>
                 <p> Olen ollut ylä-asteella TET:issä kahvilassa, jossa autoin pääosassa...</p>
                 <ul style="margin-left: 1%;">
@@ -30,8 +32,12 @@
                     <li>Tuotteiden valmistelussa/ tätössä/ järjestelyssä</li>
                 </ul>
                 <p> vuosi: 2024 ja 2025</p>
-            </section>
-            <section>
+                <button command="close" commandfor="cafeDia"> Poistu </button>
+            </dialog>
+            <br>
+            <br>
+            <button command="show-modal" commandfor="homeDia">Taloyhtiö 332 BC</button>
+            <dialog id="homeDia">
                 <h2> Taloyhtiön apu (keksitty (ei ollut legit työ)) </h2>
                 <p> Olen auttanut taloyhtiötäni... </p>
                 <ul style="margin-left: 1%;">
@@ -39,9 +45,13 @@
                     <li>Pihan siivouksessa</li>
                     <li>Trampoliinin kasaamisessa/ purkamisessa</li>
                 </ul>
-                <p> vuosi: 1969</p>
-            </section>
-            <section>
+                <p> vuosi: 332 BC</p>
+                <button command="close" commandfor="homeDia"> Poistu </button>
+            </dialog>
+            <br>
+            <br>
+            <button command="show-modal" commandfor="shopDia">Kauppa 1969</button>
+            <dialog id="shopDia">
                 <h2> Kauppa (keksitty) </h2>
                 <p> Olen ollut kauppa kaupassa töissä, jossa autoin...</p>
                 <ul style="margin-left: 1%;">
@@ -50,7 +60,8 @@
                     <li>Lattian katsomisessa</li>
                 </ul>
                 <p> vuosi: 1969</p>
-            </section>
+                <button command="close" commandfor="shopDia"> Poistu </button>
+            </dialog>
         </main>
     </body>
 </html>
