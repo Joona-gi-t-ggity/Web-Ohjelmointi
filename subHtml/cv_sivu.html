@@ -10,7 +10,7 @@
         <meta name="author" content="Kewl hlö :D">
         
         <link rel="icon" href="../media/iconDrawing.png" type="image/png">
-        <link rel="stylesheet" href="../CSS/styles.css">
+        <link rel="stylesheet" href="../CSS/styles.css" id="styleSheetElem">
         <title> CV </title>
     </head>
     <body>
@@ -18,11 +18,25 @@
             <h1> Joona Pesonen </h1>
             <p> Tiev-alan opiskelia</p>
         </header>
-        <nav> <!-- Nav palkki -->
-            <a href="./cv_sivu.html"> CV sivulle... </a>
-            <a href="./tyokoke.html"> Tylkokemus sivulle... </a>
-            <a href="../main.html"> Portfolioon..? </a>
-        </nav>
+        <div style="display: flex; margin-left: 0%;">
+            <nav> <!-- Nav palkki -->
+                <a href="./cv_sivu.html"> CV sivulle... </a>
+                <a href="./tyokoke.html"> Tylkokemus sivulle... </a>
+                <a href="../main.html"> Portfolioon..? </a>
+            </nav>
+            <button onclick="swapCSS()" style="margin-left: auto;">Muuta CSS</button>
+            <script>
+                function swapCSS() {
+                    const styleElem = document.getElementById("styleSheetElem");
+                    console.log(styleElem.getAttribute("href"));
+                    if (styleElem.getAttribute("href") == "../CSS/styles.css") {
+                        styleElem.setAttribute("href", "../CSS/nazi_styles.css");
+                    } else {
+                        styleElem.setAttribute("href", "../CSS/styles.css");
+                    }
+                }
+            </script>
+        </div>
         <hr> <!-- Jako -->
         <main> <!-- Tieto palkki -->
             <section>
@@ -35,7 +49,7 @@
             </section>
             <section>
             <h2> Profiili/ itseni kuvailu </h2>
-                <div style="margin-left: 3%;">
+                <div>
                     <h3>Ominaisuuksiani</h3>
                     <p> 
                         Olen kiinnostunut tietotekniikasta ja pyrin tekemään parhaani kaikessa mitä teen. <br>
@@ -51,7 +65,7 @@
             </section>
             <section>
             <h2> Koulutus/ työkokemus </h2>
-                <div style="margin-left: 3%;">
+                <div>
                     <h3> Ammatilliset-opinnot </h3>
                     <p> Opiskelen tällä hetkellä tieto-ja viestintätekniikan alalla ohjelmointia. <br>
                         Kokemusta on

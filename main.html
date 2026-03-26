@@ -10,7 +10,7 @@
         <meta name="author" content="Kewl hlö :D">
 
         <link rel="icon" href="media/iconDrawing.png" type="image/png">
-        <link rel="stylesheet" href="./CSS/styles.css">
+        <link rel="stylesheet" href="./CSS/styles.css" id="styleSheetElem">
         <title> Main page </title>
     </head>
     <body>
@@ -18,11 +18,25 @@
             <h1 style="text-align: center;"> Tämä on etusivu </h1>
             <hr>
         </header>
-        <nav>
-            <a href="./subHtml/cv_sivu.html"> CV sivulle... </a>
-            <a href="./subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
-            <a href="./main.html"> Portfolioon..? </a>
-        </nav>
+        <div style="display: flex; margin-left: 0%;">
+            <nav>
+                <a href="./subHtml/cv_sivu.html"> CV sivulle... </a>
+                <a href="./subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
+                <a href="./main.html"> Portfolioon..? </a>
+            </nav>
+            <button onclick="swapCSS()" style="margin-left: auto;">Muuta CSS</button>
+            <script>
+                function swapCSS() {
+                    const styleElem = document.getElementById("styleSheetElem");
+                    console.log(styleElem.getAttribute("href"));
+                    if (styleElem.getAttribute("href") == "./CSS/styles.css") {
+                        styleElem.setAttribute("href", "./CSS/nazi_styles.css");
+                    } else {
+                        styleElem.setAttribute("href", "./CSS/styles.css");
+                    }
+                }
+            </script>
+        </div>
         <main>
             <section>
                 <h2> Tässä otsikko </h2>
