@@ -1,0 +1,39 @@
+body {
+    background-image: url(../images/background.jpg);
+    margin: 0;
+    padding: 0;
+}
+ul {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;  
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #014479;
+  display: flex;
+  margin-bottom: 20px;
+}
+ul li a {
+  display: block;
+  color: #FDAED5;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul li a:hover {
+  scale: 1.1;
+  background-color: #014479;
+  color: #fcf5e1;
+}
+
+header {
+  font-family: "Gentium Plus", serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #FDAED5;
+  background-color: #014479;
+  padding: 0;
+  font-size: 25px;
+  text-align: center;
+}

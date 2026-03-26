@@ -1,0 +1,109 @@
+/* Body */
+body {
+    background-color: #fcf5e1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Meow Button */
+.testbtn {
+  background-color: #FDD2E5;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.testbtn:hover {
+  background-color: #FDAED5;
+}
+
+/* Article */
+article {
+  border-style: dotted;
+  border-color: #FDAED5;
+  border-radius: 8px;
+
+  width: 45%;
+  background: #B6DB92;
+  
+  padding: 10px;
+
+  text-align: center;
+  color: #fcf5e1;
+
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header */
+header {
+    font-family: "Gentium Plus", serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #fcf5e1;
+    background-color: #FDAED5;
+    padding: 1px;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+ul.a {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;  
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #CFE6B9;
+  display: flex;
+}
+ul.a li a {
+  display: block;
+  color: #FDAED5;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.a li a:hover {
+  scale: 1.1;
+  background-color: #B6DB92;
+  color: #fcf5e1;
+}
+
+/* h2 class a */
+h2.a {
+  font-size: 30px;
+  margin-top: 1%;
+  text-align: center;
+  color: #FDAED5;
+}
+
+/* h2 class b */
+h2.b {
+  color: #fcf5e1;
+}
+
+ul.b {
+  top: 0;  
+  list-style-type: none;
+
+  padding: 0;
+  background-color: #B6DB92;
+}
+ul.b li a {
+  display: block;
+  color: #fcf5e1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.b li a:hover {
+  scale: 1.2;
+  background-color: #B6DB92;
+  color: #fcf5e1;
+}

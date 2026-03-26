@@ -1,5 +1,8 @@
-function swapCSS(cssPath, loopList) {
+function swapCSS(cssPath) {
+    const loopList = ["nazi_styles.css", "styles.css", "null.css", "siiri (1).css", "siiri (2).css", "siiri (3).css", "siiri (4).css", "siiri (5).css", "siiri (6).css", "siiri (7).css", "siiri (8).css", "siiri (9).css", "siiri (10).css", "siiri (11).css"]
+    
     const styleElem = document.getElementById("styleSheetElem");
+    const cssButton = document.getElementById("cssButton");
 
     var filename = styleElem.getAttribute("href").split('/').pop();
     let index = loopList.indexOf(filename);
@@ -14,4 +17,5 @@ function swapCSS(cssPath, loopList) {
     //console.log(loopList.length);
     //console.log(loopList[nextIndex]);
     styleElem.setAttribute("href", `${cssPath}/${loopList[nextIndex]}`);
+    cssButton.innerText = `css: ${loopList[nextIndex]}`;  
 }
