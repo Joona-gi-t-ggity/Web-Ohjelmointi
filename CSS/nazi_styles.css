@@ -4,8 +4,8 @@ body {
     margin-right: 64px;
 }
 section {
-    border: 2px solid #;
-    background-color: #dddddd;
+    border: 2px solid #9ab9ab;
+    background-color: #bcdbcd;
 }
 h1 {
     color: #ff0000;
@@ -28,4 +28,33 @@ h5 {
 }
 h6 {
     color: #ff00ff;
+}
+
+a {
+    color: #fa9907;
+}
+a:hover {
+    color: #ffbb33;
+}
+a:visited {
+    color: #808080;
+}
+
+button {
+    background-color: #fa9907;
+    color: #ffffff;
+}
+button:hover {
+    background-color: #ffbb33;
+}
+
+form input:hover, textarea:hover, select:hover{
+    background-color: #ffffaa;
+}
+
+li {
+    font-style: normal;
+}
+li:last-child {
+    font-style: italic !important;
 }

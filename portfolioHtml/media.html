@@ -10,7 +10,7 @@
         <meta name="author" content="Kewl hlö :D">
 
         <link rel="icon" href="../media/iconDrawing.png" type="image/png">
-        <link rel="stylesheet" href="../CSS/styles.css">
+        <link rel="stylesheet" href="../CSS/styles.css" id="styleSheetElem">
         <title> Media </title>
     </head>
     <body>
@@ -18,11 +18,15 @@
             <h1 style="text-align: center;"> Media sivu </h1>
             <hr>
         </header>
-        <nav>
-            <a href="../subHtml/cv_sivu.html"> CV sivulle... </a>
-            <a href="../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
-            <a href="../main.html"> Portfolioon..? </a>
-        </nav>
+        <div style="display: flex; margin-left: 0%;">
+            <nav> <!-- Nav palkki -->
+                <a href="../subHtml/cv_sivu.html"> CV sivulle... </a>
+                <a href="../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
+                <a href="../main.html"> Portfolioon..? </a>
+            </nav>
+            <button onclick='swapCSS("../CSS", ["nazi_styles.css", "styles.css", "null.css"])' style="margin-left: auto;">Muuta CSS</button>
+            <script src="../js/javascript.js"></script>
+        </div>
         <hr>
         <video controls autoplay muted>
             <source src="../media/bird_hop.mp4" type="video/mp4">

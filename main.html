@@ -24,18 +24,8 @@
                 <a href="./subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
                 <a href="./main.html"> Portfolioon..? </a>
             </nav>
-            <button onclick="swapCSS()" style="margin-left: auto;">Muuta CSS</button>
-            <script>
-                function swapCSS() {
-                    const styleElem = document.getElementById("styleSheetElem");
-                    console.log(styleElem.getAttribute("href"));
-                    if (styleElem.getAttribute("href") == "./CSS/styles.css") {
-                        styleElem.setAttribute("href", "./CSS/nazi_styles.css");
-                    } else {
-                        styleElem.setAttribute("href", "./CSS/styles.css");
-                    }
-                }
-            </script>
+            <button onclick='swapCSS("./CSS", ["nazi_styles.css", "styles.css", "null.css"])' style="margin-left: auto;">Muuta CSS</button>
+            <script src="./js/javascript.js"></script>
         </div>
         <main>
             <section>
