@@ -1,4 +1,4 @@
-function swapCSS(cssPath) {
+function swapCSS(cssPath, showId = null) {
     const loopList = [
         "nazi_styles.css", "styles.css", "null.css", 
         "siiri (1).css", "siiri (2).css", "siiri (3).css", 
@@ -21,10 +21,22 @@ function swapCSS(cssPath) {
     //console.log(loopList.length);
     //console.log(loopList[nextIndex]);
     styleElem.setAttribute("href", `${cssPath}/${loopList[nextIndex]}`);
+    if (showId !== null) {
+        const showElem = document.getElementById(showId)
+        if (loopList[nextIndex] === "nazi_styles.css") {
+            showElem.innerText = 'CSS: css_teht.css'
+        }else {
+            showElem.innerText = `CSS: ${loopList[nextIndex]}`
+        }
+    }
 }
 function showCSS(showId) {
     const styleElem = document.getElementById("styleSheetElem");
     const showElem = document.getElementById(showId);
-
-    showElem.innerText = `CSS: ${styleElem.getAttribute("href").split("/").pop()}`;
+    const filename = styleElem.getAttribute("href").split("/").pop()
+    if (filename === "nazi_styles.css") {
+        showElem.innerText = 'CSS: css_teht.css'
+    }else {
+        showElem.innerText = `CSS: ${filename}`
+    }
 }
