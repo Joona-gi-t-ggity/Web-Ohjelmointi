@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "basic-font";
+  src: url("../fonts/Gelasio-basic.ttf");
+  font-weight: normal;
+}
+
+body {
+    font-family: "basic-font", Arial, sans-serif;
+
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'main_nav main_nav'
+        'side_nav content_area'
+        'footer footer';
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 2fr 1fr 20fr 1fr;
+
+}
+header {
+    grid-area: header;
+    background-color: #ccb;
+    border-bottom: 0.3em solid #000;
+}
+nav {
+    grid-area: main_nav;
+    background-color: #ddd;
+    border-top: 0.2em solid #aaa;
+    align-content: center;
+    padding-left: 1em;
+    border-bottom: 0.2em solid #aaa;
+}
+main {
+    grid-area: content_area;
+    background-color: #fff;
+    padding: 1em;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: side_nav;
+    background-color: #ddd;
+    border-right: 0.2em solid #aaa;
+    padding: 0.5em;
+
+    justify-content: start;
+    gap: 1em;
+}
+footer {
+    grid-area: footer;
+    background-color: #ccb;
+    padding-left: 0.5em;
+    border-top: 0.2em solid #aaa;
+}
+section {
+    border: 0.1em solid #bbb;
+    padding: 1em;
+    margin: 0.3em;
+    background-color: #ddd;
+}
