@@ -1,7 +1,19 @@
+@font-face {
+  font-family: "pixel-font";
+  src: url("../fonts/Doto-pixel.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "basic-font";
+  src: url("../fonts/Gelasio-basic.ttf");
+  font-weight: normal;
+}
+
 body {
     background-color: #abcabc;
     margin-left: 64px;
     margin-right: 64px;
+    font-family: "basic-font", Arial, sans-serif;
 }
 section {
     border: 2px solid #9ab9ab;
@@ -9,25 +21,31 @@ section {
 }
 h1 {
     color: #ff0000;
+    font-family: "pixel-font", Arial, sans-serif;
     font-size: 60px;
 }
 h2 {
     color: #00ff00;
+    font-family: "pixel-font", Arial, sans-serif;
     font-size: 48px;
 }
 h3 {
     color: #0000ff;
+    font-family: "pixel-font", Arial, sans-serif;
     font-size: 32px;
 }
 h4 {
     color: #ffff00;
+    font-family: "pixel-font", Arial, sans-serif;
     font-size: 18px;
 }
 h5 {
     color: #00ffff;
+    font-family: "pixel-font", Arial, sans-serif;
 }
 h6 {
     color: #ff00ff;
+    font-family: "pixel-font", Arial, sans-serif;
 }
 
 a {

@@ -1,6 +1,18 @@
+@font-face {
+  font-family: "pixel-font";
+  src: url("../fonts/Doto-pixel.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "basic-font";
+  src: url("../fonts/Gelasio-basic.ttf");
+  font-weight: normal;
+}
+
 body {
     background-color: #ccc;
     margin: 20px;
+    font-family: "basic-font", Arial, sans-serif;
 }
 section {
     border: 1px solid #bbb;
@@ -10,6 +22,9 @@ section {
 }
 div {
     margin-left: 3%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "basic-font", Arial, sans-serif;
 }
 
 h1 {
