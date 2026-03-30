@@ -5,7 +5,7 @@ function createStyleShiz(subjectId, cssPath) {
     var default_css = styleElem.getAttribute("href")
 
     container.innerHTML = `
-        <button onclick='swapCSS("${cssPath}", "CssButton")' style="margin-left: auto;">Muuta CSS-</button>
+        <button onclick='swapCSS("${cssPath}", "CssButton")'>Muuta CSS-</button>
         <button onclick='showCSS("CssButton")' id="CssButton">Näytä CSS-</button>
         <button onclick='loadCSS(null, "${default_css}")'>def CSS</button>
         <button onclick='loadCSS("${cssPath}","nazi_styles.css")'>teht CSS</button>

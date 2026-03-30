@@ -9,26 +9,23 @@
         <meta name="author" content="Kewl hlö :D">
 
         <link rel="icon" href="../media/iconDrawing.png" type="image/png">
-        <link rel="stylesheet" href="../CSS/null.css" id="styleSheetElem">
+        <link rel="stylesheet" href="../CSS/grid.css" id="styleSheetElem">
         <title>Forum</title>
+
+        <script src="../js/javascript.js"></script>
     </head>
     <body style="background-color: #ccc;">
         <header>
             <h1 style="text-align: center;"> Forum </h1>
-            <hr>
         </header>
-        <div style="display: flex; margin-left: 0%;">
-            <nav> <!-- Nav palkki -->
-                <a href="../subHtml/cv_sivu.html"> CV sivulle... </a>
-                <a href="../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
-                <a href="./grid.html"> Portfolioon..? </a>
-            </nav>
-            <div id="cssNav" style="margin-left: auto;">
-                <button onclick='createStyleShiz("cssNav", "../CSS")'> load CSS nav</button>
-            </div>
-
-            <script src="../js/javascript.js"></script>
-        </div>
+        <nav> <!-- Nav palkki -->
+            <a href="../subHtml/cv_sivu.html"> CV sivulle... </a>
+            <a href="../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
+            <a href="./grid.html"> Portfolioon..? </a>
+        </nav>
+        <aside id="cssNav">
+            <button onclick='createStyleShiz("cssNav", "../CSS")'> load CSS nav</button>
+        </aside>
         <hr>
         <main>
             <button command="show-modal" commandfor="commentPopup" > Kommentoi </button>
@@ -101,6 +98,9 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <h3> Sivu ei mee pitemmälle :D </h3>
+        </footer>
         <script>
             document.getElementById("postCommentForm").addEventListener("submit", function(e) {
                 e.preventDefault(); // Stop form from submitting normally
@@ -122,7 +122,7 @@
                         <p> ${comCont} </p>
                     </div>
                     <hr>
-                    `;
+                `;
             });
         </script>
     </body>

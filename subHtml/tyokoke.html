@@ -12,6 +12,8 @@
         <link rel="icon" href="../media/iconDrawing.png" type="image/png">
         <link rel="stylesheet" href="../CSS/styles.css" id="styleSheetElem">
         <title>Työkokemus</title>
+
+        <script src="../js/javascript.js"></script>
     </head>
     <body>
         <header>
@@ -24,9 +26,9 @@
                 <a href="./tyokoke.html"> Tylkokemus sivulle... </a>
                 <a href="../portfolioHtml/grid.html"> Portfolioon..? </a>
             </nav>
-            <button onclick='swapCSS("../CSS")' style="margin-left: auto;">Muuta CSS-</button>
-            <button onclick='showCSS("CssButton")' id="CssButton">Näytä CSS-</button>
-            <script src="../js/javascript.js"></script>
+            <div id="cssNav" style="margin-left: auto;">
+                <button onclick='createStyleShiz("cssNav", "../CSS")'> load CSS nav</button>
+            </div>
         </div>
         <hr>
         <main>
