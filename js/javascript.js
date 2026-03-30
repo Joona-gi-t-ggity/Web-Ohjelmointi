@@ -22,12 +22,7 @@ function swapCSS(cssPath, showId = null) {
     //console.log(loopList[nextIndex]);
     styleElem.setAttribute("href", `${cssPath}/${loopList[nextIndex]}`);
     if (showId !== null) {
-        const showElem = document.getElementById(showId)
-        if (loopList[nextIndex] === "nazi_styles.css") {
-            showElem.innerText = 'CSS: css_teht.css'
-        }else {
-            showElem.innerText = `CSS: ${loopList[nextIndex]}`
-        }
+        showCSS(showId);
     }
 }
 function showCSS(showId) {
