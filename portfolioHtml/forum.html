@@ -23,8 +23,10 @@
                 <a href="../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
                 <a href="../main.html"> Portfolioon..? </a>
             </nav>
-            <button onclick='swapCSS("../CSS", "CssButton")' style="margin-left: auto;">Muuta CSS-</button>
-            <button onclick='showCSS("CssButton")' id="CssButton">Näytä CSS-</button>
+            <div id="cssNav" style="margin-left: auto;">
+                <button onclick='createStyleShiz("cssNav", "../CSS")'> load CSS nav</button>
+            </div>
+
             <script src="../js/javascript.js"></script>
         </div>
         <hr>
