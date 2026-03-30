@@ -4,7 +4,7 @@ function swapCSS(cssPath, showId = null) {
         "siiri (1).css", "siiri (2).css", "siiri (3).css", 
         "siiri (4).css", "siiri (5).css", "siiri (6).css", 
         "siiri (7).css", "siiri (8).css", "siiri (9).css", 
-        "siiri (10).css", "siiri (11).css", "flex.css"
+        "siiri (10).css", "siiri (11).css", "flex.css", "table.css"
     ];
     const styleElem = document.getElementById("styleSheetElem");
 
