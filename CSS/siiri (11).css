@@ -1,20 +1,22 @@
 body {
-    background-color: #FCC7D9;
+    background-color: #fcf5e1;
     margin: 0;
     padding: 0;
 }
+@font-face {
+  font-family: "H Font";
+  src: url("../fonts/Starshines.ttf");
+  font-weight: normal;
+}
 header {
-    font-family: "Gentium Plus", serif;
+    font-family: "H Font";
     font-weight: 800;
     font-style: normal;
-    color: #FFA6C9;
-    background-color: #FCC7D9;
+    color: #fcf5e1;
+    background-color: #FDAED5;
     padding: 1px;
     font-size: 25px;
     text-align: center;
-}
-main {
-  margin: 20px;
 }
 ul {
   position: -webkit-sticky;
@@ -24,71 +26,53 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #FFA6C9;
+  background-color: #CFE6B9;
   display: flex;
+  margin-bottom: 20px;
 }
 ul li a {
   display: block;
-  color: #E9CCED;
+  color: #FDAED5;
   padding: 14px 16px;
   text-decoration: none;
 }
 ul li a:hover {
   scale: 1.1;
-  background-color: #D6B8E6;
-  color: #FCE6F4;
+  background-color: #B6DB92;
+  color: #fcf5e1;
 }
-article {
-  border-style: dotted;
-  border-color: #B19CD9;
-  border-radius: 8px;
-
-  width: 45%;
-  background-color: #FFA6C9;
-  
-
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  text-align: center;
-  color: #FCE6F4;
-
-  margin-top: 20px;
-  margin-left: 4%;
+main{
+  width: 800px;
+  text-align: left;
+  color: #FDAED5;
+  margin-left: auto;
   margin-right: auto;
 }
-aside {
-  border-style: dotted;
-  border-color: #B19CD9;
-  border-radius: 8px;
-
-  text-align: center;
-  float: right;
-  width: 40%;
-  background-color: #FFA6C9;
-
-  padding-top: 20px;
+section{
+  border-style: solid;
+  border-color: #FDAED5;
+  width: auto;
+  background: #FDD2E5;
+  padding: 10px;
+  text-align: left;
   padding-bottom: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  margin-right: 4%;
-  margin-left: auto;
+  padding-top: 0px;
+  color: #FDAED5;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.testbtn {
-  background-color: #FCC7D9;
-  color: rgb(255, 255, 255);
-
-  font-size: 15px;
-  padding: 12px;
-
-  border: none;
-  border-radius: 5px;
-
-  cursor: pointer;
-  
-}
-.testbtn:hover {
+button.a {
+  color: #fcf5e1;
+  font-size: medium;
+  width: 100px;
+  height: 40px;
   background-color: #FDAED5;
+  border-color: #FDD2E5;
+}
+dialog {
+  border-style: dotted;
+  border-color: #FDAED5;
+  border-radius: 8px;
+  background-color: #CFE6B9;
 }

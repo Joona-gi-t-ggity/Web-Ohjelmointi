@@ -1,17 +1,7 @@
 body {
-    background-color: #fcf5e1;
+    background-image: url(../images/background.jpg);
     margin: 0;
     padding: 0;
-}
-header {
-    font-family: "Gentium Plus", serif;
-    font-weight: 800;
-    font-style: normal;
-    color: #fcf5e1;
-    background-color: #FDAED5;
-    padding: 1px;
-    font-size: 25px;
-    text-align: center;
 }
 ul {
   position: -webkit-sticky;
@@ -21,7 +11,7 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #CFE6B9;
+  background-color: #014479;
   display: flex;
   margin-bottom: 20px;
 }
@@ -33,41 +23,21 @@ ul li a {
 }
 ul li a:hover {
   scale: 1.1;
-  background-color: #B6DB92;
+  background-color: #014479;
   color: #fcf5e1;
 }
-main{
-  width: 800px;
-  text-align: left;
+@font-face {
+  font-family: "H Font";
+  src: url("../fonts/Starshines.ttf");
+  font-weight: normal;
+}
+header {
+  font-family: "H Font";
+  font-weight: 800;
+  font-style: normal;
   color: #FDAED5;
-  margin-left: auto;
-  margin-right: auto;
-}
-section{
-  border-style: solid;
-  border-color: #FDAED5;
-  width: auto;
-  background: #FDD2E5;
-  padding: 10px;
-  text-align: left;
-  padding-bottom: 20px;
-  padding-top: 0px;
-  color: #FDAED5;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-button.a {
-  color: #fcf5e1;
-  font-size: medium;
-  width: 100px;
-  height: 40px;
-  background-color: #FDAED5;
-  border-color: #FDD2E5;
-}
-dialog {
-  border-style: dotted;
-  border-color: #FDAED5;
-  border-radius: 8px;
-  background-color: #CFE6B9;
+  background-color: #014479;
+  padding: 0;
+  font-size: 25px;
+  text-align: center;
 }

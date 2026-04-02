@@ -1,25 +1,43 @@
 body {
-    background-color: rgb(252, 186, 217);
+    background-color: #8EB1D1;
+    margin: 0;
+    padding: 0;
 }
-h1 {
-    color: rgb(209, 130, 167);
+@font-face {
+  font-family: "H Font";
+  src: url("../fonts/Starshines.ttf");
+  font-weight: normal;
 }
-h2 {
-    color: rgb(209, 130, 167);
+header {
+    font-family: "H Font";
+    font-weight: 800;
+    font-style: normal;
+    color: #8EB1D1;
+    background-color: #1C2B48;
+    padding: 1px;
+    font-size: 25px;
+    text-align: center;
 }
-h3 {
-    color: rgb(192, 103, 144);
+main {
+    color: #1C2B48;
+
+    background-color: #f0f8ff;
+
+    border-color: #f0f8ff;
+    border-radius: 8px;
+
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 20px;
+
+    padding: 20px;
 }
-p {
-    color: rgb(192, 103, 144);
+input.b {
+    background-color: #8EB1D1;
+    border-color: #5e81a1;
+    color: #FFE6F2;
 }
-li {
-    color: rgb(192, 103, 144);
-}
-a {
-    color: rgb(192, 103, 144);
-}
-ul.a {
+ul {
   position: -webkit-sticky;
   position: sticky;
   top: 0;  
@@ -27,17 +45,18 @@ ul.a {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgb(252, 186, 217);
+  background-color: #A7C7E7;
   display: flex;
+  margin-bottom: 20px;
 }
-ul.a li a {
+ul li a {
   display: block;
-  color: rgb(192, 103, 144);
+  color: #1C2B48;
   padding: 14px 16px;
   text-decoration: none;
 }
-ul.a li a:hover {
+ul li a:hover {
   scale: 1.1;
-  background-color: rgb(209, 130, 167);
-  color: #FFFF;
+  background-color: #014479;
+  color: #fcf5e1;
 }

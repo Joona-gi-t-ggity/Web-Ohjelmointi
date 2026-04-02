@@ -1,9 +1,79 @@
 body {
-    background-color: #fcf5e1;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'navigation navigation navigation'
+    'section main main'
+    'footer footer footer';
+
+  grid-template-columns:15em 4em 1fr;
+
+  grid-template-rows:10em 3em auto 5em;
+
 }
-ul {
+
+/* Header */
+@font-face {
+  font-family: "H Font";
+  src: url("../fonts/Starshines.ttf");
+  font-weight: normal;
+}
+header {
+    font-size: 30px;
+    color: #FCF5E1;
+    font-family: "H Font";
+    text-align: center;
+
+    background-color: #FDAED5;
+    grid-area: header;
+}
+
+/* Navigation Bar Side */
+
+section {
+  background-color: #B6DB92;
+  grid-area: section;
+}
+ul.a {
+  list-style-type: none;
+}
+ul.a li {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+ul.a li a {
+  color: #85b159;
+  text-decoration: none;
+}
+ul.a li a:hover {
+  color: #FCF5E1;
+}
+
+/* Main Area */
+
+main {
+    padding: 20px;
+    background-color: #FCF5E1;
+    grid-area: main;
+}
+
+/* Footer */
+
+footer {
+    padding-left: 10px;
+    background-color: #FDAED5;
+    grid-area: footer;
+}
+
+/* Navigation Bar Top */
+
+nav {
+    background-color: #CFE6B9;
+    grid-area: navigation;
+}
+ul.b {
   position: -webkit-sticky;
   position: sticky;
   top: 0;  
@@ -11,28 +81,38 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #B6DB92;
+  background-color: #CFE6B9;
   display: flex;
-  margin-bottom: 20px;
 }
-ul li a {
+ul.b li a {
   display: block;
-  color: #fcf5e1;
-  padding: 14px 16px;
+
+  color: #FDAED5;
   text-decoration: none;
+
+  margin-right: 2px;
+  padding: 14px 16px;
+
+  border-color: #fac2de;
+  border-style: dotted;
 }
-ul li a:hover {
-  scale: 1.1;
-  background-color: #FDAED5;
-  color: #fcf5e1;
+ul.b li a:hover {
+  background-color: #fac2de;
+  color: #FCF5E1;
 }
-header {
-    font-family: "Gentium Plus", serif;
-    font-weight: 800;
-    font-style: normal;
-    color: #fcf5e1;
-    background-color: #FDAED5;
-    padding: 1px;
-    font-size: 25px;
-    text-align: center;
+
+/* Text */
+@font-face {
+  font-family: "P Font";
+  src: url("../fonts/Delius-Regular.ttf");
+  font-weight: normal;
+}
+
+p, a, h2.b {
+  font-family: "P Font";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FCF5E1;
+    font-family: "H Font";
 }

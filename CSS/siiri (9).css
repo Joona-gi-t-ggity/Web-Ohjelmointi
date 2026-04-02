@@ -1,20 +1,29 @@
+/* Body */
 body {
     margin: 0;
     padding: 0;
-    background-color: #f8b489;
+    background-color: #F1C8D6;
 }
 
+@font-face {
+  font-family: "H Font";
+  src: url("../fonts/Starshines.ttf");
+  font-weight: normal;
+}
+
+/* Header */
 header {
-    font-family: "Gentium Plus", serif;
+    font-family: "H Font";
     font-weight: 800;
     font-style: normal;
-    color: #FFD899;
-    background-color: #FF8840;
-    padding: 1px;
+    color: #0D222F;
+    background-color: #F178A1;
+    padding: 0.1%;
     font-size: 25px;
     text-align: center;
 }
 
+/* Nav Bar */
 ul {
   position: -webkit-sticky;
   position: sticky;
@@ -23,119 +32,35 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #FF5969;
+  background-color: #0D222F;
   display: flex;
-  margin-bottom: 20px;
 }
 ul li a {
   display: block;
-  color: #FFD899;
+  color: #F178A1;
   padding: 14px 16px;
   text-decoration: none;
 }
 ul li a:hover {
-  scale: 1.1;
-  background-color: #FFBB63;
-  color: #FF5969;
+  transform: scale(1.1);
+  background-color: #142d3b;
+  color: #F1C8D6;
 }
 
-main {
-    background-color: white;
-    margin-left: 10%;
-    margin-right: 20%;
-    padding: 20px;
-    border-radius: 8px;
-    border-color: white;
-}
+section {
+  border-style: dotted;
+  border-color: #0D222F;
+  border-radius: 8px;
 
-table, th, td {
-  border-collapse: collapse;
-}
+  width: 45%;
+  background: #fcecec;
+  
 
-tr {
-    height: 50px;
-}
+  font-size: large;
+  text-align: center;
+  color: #0D222F;
 
-/* Class A */
-td.a {
-    background-color: #FF8840; 
-    border-color: black;
-    border-width: 3px;
-
-}
-th.a {
-    background-color: #FF8840; 
-    border-color: black;
-    border-width: 3px;    
-}
-
-/* Class B */
-td.b {
-    background-color: #FFBB63; 
-    border-color: black;
-    border-width: 3px;
-
-}
-th.b {
-    background-color: #FFBB63; 
-    border-color: black;
-    border-width: 3px;    
-}
-
-/* Class C */
-td.c {
-    background-color: #FF5969; 
-    border-color: black;
-    border-width: 3px;
-
-}
-th.c {
-    background-color: #FF5969; 
-    border-color: black;
-    border-width: 3px;    
-}
-
-/* Class D */
-td.d {
-    background-color: #DB2265; 
-    border-color: black;
-    border-width: 3px;
-
-}
-th.d {
-    background-color: #DB2265; 
-    border-color: black;
-    border-width: 3px;    
-}
-
-/* Class E */
-td.e {
-    background-color: #FE97B0; 
-    border-color: black;
-    border-width: 3px;
-
-}
-th.e {
-    background-color: #FE97B0; 
-    border-color: black;
-    border-width: 3px;    
-}
-
-/* Class F */
-td.f {
-    background-color: #FFD899; 
-    border-color: black;
-    border-width: 3px;
-
-}
-th.f {
-    background-color: #FFD899; 
-    border-color: black;
-    border-width: 3px;    
-}
-
-aside {
-    padding-right: 50px;
-    float: right;
-    color: #DB2265;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }

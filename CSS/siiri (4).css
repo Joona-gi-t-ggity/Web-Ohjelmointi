@@ -1,37 +1,24 @@
 body {
-    background-color: #E4CDB0;
     margin: 0;
     padding: 0;
+    background-color: #f8b489;
+}
+@font-face {
+  font-family: "H Font";
+  src: url("../fonts/Starshines.ttf");
+  font-weight: normal;
 }
 header {
-    color: #ABBF9B;
-    background-color: #E6E2D7;
-    padding: 0.5px;
+    font-family: "H Font";
+    font-weight: 800;
+    font-style: normal;
+    color: #FFD899;
+    background-color: #FF8840;
+    padding: 1px;
     font-size: 25px;
     text-align: center;
 }
-article {
 
-  border-color: #A2663C;
-  border-style: dotted;
-  border-radius: 8px;
-  
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 600px;
-  padding: 10px;
-
-  text-align: ce;
-
-  padding-bottom: 10px;
-  padding-top: 0px;
-  color: #A2663C;
-}
-p {
-    font-size: 20px;
-}
 ul {
   position: -webkit-sticky;
   position: sticky;
@@ -40,37 +27,119 @@ ul {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #A2663C;
+  background-color: #FF5969;
   display: flex;
   margin-bottom: 20px;
 }
 ul li a {
   display: block;
-  color: #ABBF9B;
+  color: #FFD899;
   padding: 14px 16px;
   text-decoration: none;
 }
 ul li a:hover {
   scale: 1.1;
-  background-color: #b6774b;
-  color: #E6E2D7;
+  background-color: #FFBB63;
+  color: #FF5969;
 }
 
-details > summary {
-  margin-left: auto;
-  margin-right: auto;
-  color: #b6774b;
-  padding: 4px;
-  width: 200px;
-  background-color: #ABBF9B;
-  border: none;
-  box-shadow: 1px 1px 2px #9fb48c;
-  cursor: pointer;
+main {
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 20%;
+    padding: 20px;
+    border-radius: 8px;
+    border-color: white;
 }
 
-details > article {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #E6E2D7;
-  padding: 4px;
+table, th, td {
+  border-collapse: collapse;
+}
+
+tr {
+    height: 50px;
+}
+
+/* Class A */
+td.a {
+    background-color: #FF8840; 
+    border-color: black;
+    border-width: 3px;
+
+}
+th.a {
+    background-color: #FF8840; 
+    border-color: black;
+    border-width: 3px;    
+}
+
+/* Class B */
+td.b {
+    background-color: #FFBB63; 
+    border-color: black;
+    border-width: 3px;
+
+}
+th.b {
+    background-color: #FFBB63; 
+    border-color: black;
+    border-width: 3px;    
+}
+
+/* Class C */
+td.c {
+    background-color: #FF5969; 
+    border-color: black;
+    border-width: 3px;
+
+}
+th.c {
+    background-color: #FF5969; 
+    border-color: black;
+    border-width: 3px;    
+}
+
+/* Class D */
+td.d {
+    background-color: #DB2265; 
+    border-color: black;
+    border-width: 3px;
+
+}
+th.d {
+    background-color: #DB2265; 
+    border-color: black;
+    border-width: 3px;    
+}
+
+/* Class E */
+td.e {
+    background-color: #FE97B0; 
+    border-color: black;
+    border-width: 3px;
+
+}
+th.e {
+    background-color: #FE97B0; 
+    border-color: black;
+    border-width: 3px;    
+}
+
+/* Class F */
+td.f {
+    background-color: #FFD899; 
+    border-color: black;
+    border-width: 3px;
+
+}
+th.f {
+    background-color: #FFD899; 
+    border-color: black;
+    border-width: 3px;    
+}
+
+aside {
+    padding-right: 50px;
+    float: right;
+    color: #DB2265;
 }
