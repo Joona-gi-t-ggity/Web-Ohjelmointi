@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "basic-font";
+  src: url("../fonts/Delius-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "header-font";
+  src: url("../fonts/Gelasio-basic.ttf");
+  font-weight: normal;
+}
+
+body {
+    background-color: #eee;
+    font-family: "basic-font", Arial, sans-serif;
+}
+
+header {
+    font-family: "header-font", Arial, sans-serif;
+}
+
 table {
     background-color: #FFF; 
     width: 200px; 

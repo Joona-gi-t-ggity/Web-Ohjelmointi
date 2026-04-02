@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "pixel-font";
-  src: url("../fonts/Doto-pixel.ttf");
+  font-family: "basic-font";
+  src: url("../fonts/Delius-Regular.ttf");
   font-weight: normal;
 }
 @font-face {
-  font-family: "basic-font";
+  font-family: "header-font";
   src: url("../fonts/Gelasio-basic.ttf");
   font-weight: normal;
 }
@@ -23,21 +23,23 @@ section {
 div {
     margin-left: 3%;
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "basic-font", Arial, sans-serif;
+    font-family: "header-font", Arial, sans-serif;
 }
 
 h1 {
     background-color: #ddd; 
     color: #000000;
     font-size: 32px;
+    padding: 0.4em;
 }
 h2 {
     background-color: #000000;
     color: #ffffff;
     width: fit-content;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 1em;
+    padding-right: 1em;
     align-items: center;
     font-size: 24px;
 }
@@ -45,8 +47,8 @@ h3 {
     background-color: #555555;
     color: #ffffff;
     width: fit-content;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 1em;
+    padding-right: 1em;
     align-items: center;
     font-size: 18px;
 }

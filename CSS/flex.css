@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "basic-font";
+  src: url("../fonts/Delius-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "header-font";
+  src: url("../fonts/Gelasio-basic.ttf");
+  font-weight: normal;
+}
+
+body {
+    background-color: #eee;
+    font-family: "basic-font", Arial, sans-serif;
+}
+
+header {
+    font-family: "header-font", Arial, sans-serif;
+}
+
 main div{
     border: 1px solid #000;
     padding: 5px;
