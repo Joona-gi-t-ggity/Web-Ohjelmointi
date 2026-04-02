@@ -6,20 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="icon" href="../../media/iconDrawing.png" type="image/png">
-        <link rel="stylesheet" href="../../CSS/grid.css" id="styleSheetElem">
+        <link rel="stylesheet" href="../../CSS/grid_laatikkomalli.css" id="styleSheetElem">
         
         <title>Main page (Grid)</title>
 
         <script src="../../js/javascript.js"></script>
     </head>
-    <body>
+    <body id="bodyId" style="max-width: 1000px;">
         <header>
             <h1 style="text-align: center;"> Main page (Grid) </h1>
         </header>
         <nav> <!-- Nav palkki -->
-            <a href="../../subHtml/cv_sivu.html"> CV sivulle... </a>
-            <a href="../../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
-            <a href="../../main.html"> Portfolioon..? </a>
+            <ul>
+                <li><a href="../../subHtml/cv_sivu.html"> CV sivulle... </a></li>
+                <li><a href="../../subHtml/tyokoke.html"> Tylkokemus sivulle... </a></li>
+                <li><a href="../../main.html"> Portfolioon..? </a></li>
+            </ul>
         </nav>
         <main>
             <section>
@@ -49,12 +51,41 @@
             <section>
                 <h1 style="margin: auto; text-align: center;">ꉂ(˵˃ ᗜ ˂˵) ↄ </h1>
             </section>
+            <section>
+                <h1> moi </h1>
+                <h1> moi </h1>
+                <h1> moi </h1>
+                <h1> moi </h1>
+                <h1> moi </h1>
+                <h1> moi </h1>
+                <h1> moi </h1>
+            </section>
         </main>
-        <aside id="cssNav"> 
-            <button onclick='createStyleShiz("cssNav", "../../CSS")'> load CSS nav</button>
+        <aside>
+            <div id="cssNav">
+                <button onclick='createStyleShiz("cssNav", "../../CSS")'> load CSS nav </button>
+            </div> 
+            <button onclick='changeMaxWidth()'> change max width </button>
+            <script>
+                function changeMaxWidth() {
+                    const bodyElem = document.getElementById("bodyId");
+
+                    var this_maxWidth = bodyElem.style.maxWidth;
+                    if (this_maxWidth === "100%") {
+                        bodyElem.style.maxWidth = "1000px";
+                    } else {
+                        bodyElem.style.maxWidth = "100%";
+                    }
+                    
+                }
+            </script>
         </aside>
         <footer> 
-            <h3>Tämän sivun on luonut minä ei sinä rawwwrrrrrr</h3>
+            <div>
+                <h3> Tämän sivun on luonut minä </h3>
+                <h3> EI SINÄ </h3>
+                <h3> rawwwrrrrrr</h3>
+            </div>
         </footer>
     </body>
 </html>
