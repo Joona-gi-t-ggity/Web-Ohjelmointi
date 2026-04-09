@@ -10,6 +10,9 @@
 }
 
 body {
+    background-image: url("../media/backgroundimg.png");
+    background-size: 100% auto;
+    background-repeat: repeat;
     background-color: #abcabc;
     margin-left: 64px;
     margin-right: 64px;
@@ -18,6 +21,11 @@ body {
 section {
     border: 2px solid #9ab9ab;
     background-color: #bcdbcd;
+}
+.portfolio {
+    background-image: url("../media/portfoliobc.png");
+    background-size: 67px 67px;
+    background-repeat: repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -36,17 +36,33 @@
             <br>
             <label for="loadbar">Loading...</label>
             <!-- saman jonka tein skriptillä voi tehä myös ainakin spämmimällä css nth-child juttuja -->
-            <div id="loadbar">
+            <div id="loadbar_box">
                 <script>
-                    const loadbar = document.getElementById("loadbar");
+                    const loadbar_boxDiv = document.getElementById("loadbar_box");
                     
                     for (let i = 0; i < 10; i++) {
-                        loadbar.innerHTML += `
-                            <div class="loadBarsegment" style="animation-delay: ${0.1*i}s;"></div>
+                        loadbar_boxDiv.innerHTML += `
+                            <div class="loadbar_boxSegment" style="animation-delay: ${0.1*i}s;"></div>
                         `;    
                     }
                 </script>
             </div>
+            <br>
+            <br>
+            <div id="loadbar_lines">
+                <script>
+                    const loadbar_linesDiv = document.getElementById("loadbar_lines");
+                    
+                    for (let i = 0; i < 5; i++) {
+                        loadbar_linesDiv.innerHTML += `
+                            <div class="loadbar_lineSegment" style="animation-delay: ${0.1*i}s;"></div>
+                        `;    
+                    }
+                </script>
+            </div>
+            <br>
+            <br>
+            <div class="loadbar_slide"></div>
         </main>
     </body>
 </html>
