@@ -20,11 +20,13 @@
             <h1 style="text-align: center;"> Tämä on etusivu </h1>
             <hr>
         </header>
-        <div style="display: flex; margin-left: 0%;">
+        <div style="display: flex; margin-left: 0%;" id="main_nav">
             <nav>
-                <a href="./subHtml/cv_sivu.html"> CV sivulle... </a>
-                <a href="./subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
-                <a href="./portfolioHtml/perusTeht/grid.html"> Portfolioon..? </a>
+                <ul>
+                    <li><a href="./subHtml/cv_sivu.html"> CV sivulle... </a></li>
+                    <li><a href="./subHtml/tyokoke.html"> Tylkokemus sivulle... </a></li>
+                    <li><a href="./portfolioHtml/perusTeht/grid.html"> Portfolioon..? </a></li>
+                </ul>
             </nav>
             <div id="cssNav" style="margin-left: auto;">
                 <button onclick='createStyleShiz("cssNav", "./CSS")'> load CSS nav</button>
