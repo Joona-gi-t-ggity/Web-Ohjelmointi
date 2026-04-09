@@ -9,6 +9,13 @@
   font-weight: normal;
 }
 
+#main_nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    list-style-type: none;
+}
+
 body {
     background-color: #ccc;
     margin: 20px;
