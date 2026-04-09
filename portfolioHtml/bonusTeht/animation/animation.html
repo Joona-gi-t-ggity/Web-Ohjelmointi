@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="../../../media/iconDrawing.png" type="image/png">
+        <link rel="stylesheet" href="./animation.css" id="styleSheetElem">
+
+        <title> Animation </title>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;"> Svg sivu </h1>
+            <hr>
+        </header>
+        <div style="display: flex; margin-left: 0%;">
+            <nav>
+                <a href="../../../subHtml/cv_sivu.html"> CV sivulle... </a>
+                <a href="../../../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
+                <a href="../../perusTeht/grid.html"> Portfolioon..? </a>
+            </nav>
+        </div>
+        <hr>
+        <main>
+            <img src="./spinner.png" alt="spinner" class="loading">
+            <br>
+            <br>
+            <div class="slidingDivDiv">
+                <div class="slidingDiv1"></div>
+                <div class="slidingDiv2"></div>
+                <div class="slidingDiv3"></div>
+            </div>
+            <br>
+            <br>
+            <label for="loadbar">Loading...</label>
+            <!-- saman jonka tein skriptillä voi tehä myös ainakin spämmimällä css nth-child juttuja -->
+            <div id="loadbar">
+                <script>
+                    const loadbar = document.getElementById("loadbar");
+                    
+                    for (let i = 0; i < 10; i++) {
+                        loadbar.innerHTML += `
+                            <div class="loadBarsegment" style="animation-delay: ${0.1*i}s;"></div>
+                        `;    
+                    }
+                </script>
+            </div>
+        </main>
+    </body>
+</html>
