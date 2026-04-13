@@ -61,3 +61,13 @@ function loadCSS(cssPath=null, filename) {
         styleElem.setAttribute("href", `${filename}`);
     }
 }
+
+function hello() {
+    alert("Hello world!");
+}
+
+// Display the file name when the page loads
+window.onload = function () {
+    const pageName = document.title;
+    console.log(`${pageName} avattu`);
+};
