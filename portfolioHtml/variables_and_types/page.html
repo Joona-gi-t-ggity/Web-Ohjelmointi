@@ -41,10 +41,27 @@
                         jako: d / a
                     </p>
                 </div>
-                <button onclick="summa()">summa</button>
-                <button onclick="vahennys()">vähennys</button>
-                <button onclick="kerto()">kerto</button>
-                <button onclick="jako()">jako</button>
+                <hr>
+                <div>
+                    <button onclick="summa(3, 5)">summa</button>
+                    <button onclick="vahennys(5, 7)">vähennys</button>
+                    <button onclick="kerto(7, 15)">kerto</button>
+                    <button onclick="jako(15, 5)">jako</button>
+                </div>
+                <hr>
+                <div>
+                    <label for="number1">numero 1: </label>
+                    <input type="number" name="number1" id="number1">
+                    <br>
+                    <label for="number2">numero 2: </label>
+                    <input type="number" name="number2" id="number2">
+                    <br>
+                    <button onclick="laskin_summa()">+</button>
+                    <button onclick="laskin_vahennys()">-</button>
+                    <button onclick="laskin_kerto()">*</button>
+                    <button onclick="laskin_jako()">/</button>
+                </div>
+                <hr>
             </section>
         </main>
     </body>

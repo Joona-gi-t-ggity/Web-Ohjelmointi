@@ -1,17 +1,37 @@
-var a = 3;
-var b = 5;
-var c = 7;
-var d = 15;
-
-function summa(){
+function summa(a, b) {
     alert(`${a} + ${b} = ${a + b}`)
 }
-function vahennys(){
-    alert(`${b} - ${c} = ${b - c}`)
+function vahennys(a, b) {
+    alert(`${a} - ${b} = ${a - b}`)
 }
-function kerto(){
-    alert(`${c} * ${d} = ${c * d}`)
+function kerto(a, b) {
+    alert(`${a} * ${b} = ${a * b}`)
 }
-function jako(){
-    alert(`${d} / ${a} = ${d / a}`)
+function jako(a, b) {
+    alert(`${a} / ${b} = ${a / b}`)
+}
+
+function laskin_summa() {
+    var num1 = Number(document.getElementById("number1").value);
+    var num2 = Number(document.getElementById("number2").value);
+
+    summa(num1, num2)
+}
+function laskin_vahennys() {
+    var num1 = Number(document.getElementById("number1").value);
+    var num2 = Number(document.getElementById("number2").value);
+
+    vahennys(num1, num2)
+}
+function laskin_kerto() {
+    var num1 = Number(document.getElementById("number1").value);
+    var num2 = Number(document.getElementById("number2").value);
+
+    kerto(num1, num2)
+}
+function laskin_jako() {
+    var num1 = Number(document.getElementById("number1").value);
+    var num2 = Number(document.getElementById("number2").value);
+
+    jako(num1, num2)
 }
