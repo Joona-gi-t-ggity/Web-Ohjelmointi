@@ -52,12 +52,13 @@
                     <input required type="text" name="userEmail" id="userEmail" placeholder="example@edu.turku.fi">
                     <br>
                     <label for="userBirthday">syntymäpäivä:</label>
-                    <input required type="date" name="userBirthday"> 
+                    <input required type="date" name="userBirthday" id="userBirthday"> 
                     <br>
                     <label for="advertAgree"> Suostutko, että keskusteluun annettuja tietoja saa käyttää markkinoinnissa? : </label>
-                    <input required type="checkbox" name="advertAgree">
+                    <input type="checkbox" name="advertAgree" id="advertAgree">
                     <br>
-                    <button type="submit" style="margin-top: 5px;"> lähetä kommentti</button>
+                    <button onclick="send(event)" type="submit" style="margin-top: 5px;"> lähetä kommentti</button>
+                    <script src="./forum.js" defer></script>
                 </form>
                 <hr>
                 <button command="close" commandfor="commentPopup"> Poistu </button>
@@ -101,29 +102,5 @@
         <footer>
             <h3> Sivu ei mee pitemmälle :D </h3>
         </footer>
-        <script>
-            document.getElementById("postCommentForm").addEventListener("submit", function(e) {
-                e.preventDefault(); // Stop form from submitting normally
-
-                const date = new Date();
-
-                const commentArea = document.getElementById("comments");
-
-                const comHead = document.getElementById("commentHeader").value;
-                const comCont = document.getElementById("commentContent").value;
-                const comType = document.getElementById("commentTypeSel").value;
-
-                const userEmail = document.getElementById("userEmail").value;
-
-                commentArea.innerHTML += `
-                    <p> ${(date.toLocaleString('fi-FI'))} - ${userEmail} ${comType}: </p>
-                    <div style="border: 2px solid #676767; padding: 5px;">
-                        <h3> ${comHead} </h3>
-                        <p> ${comCont} </p>
-                    </div>
-                    <hr>
-                `;
-            });
-        </script>
     </body>
 </html>
