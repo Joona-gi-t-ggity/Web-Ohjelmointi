@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="../../../media/iconDrawing.png" type="image/png">
+        <link rel="stylesheet" href="./game.css" id="styleSheetElem">
+
+        <script src="./game.js" defer></script>
+        <title>Reaktio peli</title>
+    </head>
+    <body>
+        <header>
+            <h1> Reaktio peli </h1>
+        </header>
+        <nav>
+            <a href="../../perusTeht/grid.html"> portfolioon...</a>
+        </nav>
+        <hr>
+        <main>
+            <div id="startArea">
+                <button onclick="runGame()" id="startButton"> Aloita peli </button>
+                <h2 id="countDown">3</h2>
+            </div>
+            <div id="gameArea_w">
+                <div class="gameArea_h">
+                    <button id="gB_1" class="gameButton"></button>
+                    <button id="gB_2" class="gameButton"></button>
+                </div>
+                <div class="gameArea_h">
+                    <button id="gB_3" class="gameButton"></button>
+                    <button id="gB_4" class="gameButton"></button>
+                </div>
+            </div>
+            <h2 id="scoreboardSum">Time sum: ...</h2>
+            <h2 id="scoreboardAve">Average: ...</h2>
+            <br>
+            <button onclick="testRand()">test</button>
+        </main>
+    </body>
+</html>

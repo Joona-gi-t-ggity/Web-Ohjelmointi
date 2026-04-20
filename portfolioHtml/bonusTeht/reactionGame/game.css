@@ -1,0 +1,43 @@
+body {
+    background-color: #dddddb;
+}
+header {
+    text-align: center;
+}
+
+button {
+    border: 0.1em solid #000000; 
+}
+#startButton {
+    width: auto;
+    height: 2em;
+    background-color: #eeeeee;
+}
+.gameButton {
+    width: 6em;
+    height: 4em;
+    background-color: #eeeeee;
+}
+.gameButton:hover {
+    background-color: #cccccc;
+}
+
+#gameArea_w {
+    padding: 0.2em;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2em;
+    
+}
+.gameArea_h {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+#startArea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
