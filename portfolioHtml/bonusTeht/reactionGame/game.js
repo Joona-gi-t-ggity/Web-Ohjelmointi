@@ -49,7 +49,7 @@ async function round() {
 
 var bestTime = null;
 
-const roundCount = 4;
+const roundCount = 20;
 async function runGame() {
     let counter = 0;
     const countDown = document.getElementById("countDown");
@@ -84,7 +84,7 @@ async function runGame() {
     scoreboardSum.textContent = `Time sum: ${timeSum.toFixed(2)} s`;
     scoreboardAve.textContent = `Average: ${timeAve.toFixed(2)} ms`;
 
-    countDown.innerText = "Waiting...";
+    countDown.innerText = "...";
     
     
 }
