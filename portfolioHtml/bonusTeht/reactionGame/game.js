@@ -47,17 +47,20 @@ async function round() {
     timeSum += time_taken;
 }
 
-const roundCount = 20;
+var bestTime = null;
+
+const roundCount = 4;
 async function runGame() {
     let counter = 0;
-    const countDown = document.getElementById("countDown")
+    const countDown = document.getElementById("countDown");
+    countDown.innerText = 3;
     while (counter < 3) {
         await delay(1000);
-        countDown.textContent = 3-(counter+1)
+        countDown.innerText = 3-(counter+1);
         counter++;
     }
 
-    countDown.textContent = "Go"
+    countDown.textContent = "Go";
 
     let i = 0;
     while (i < roundCount) {
@@ -65,13 +68,23 @@ async function runGame() {
         await round();
         i++;
     }
-    const timeAve = timeSum / roundCount 
-    timeSum /= 1000
+    const timeAve = timeSum / roundCount;
+    timeSum /= 1000;
     
-    const scoreboardSum = document.getElementById("scoreboardSum")
-    const scoreboardAve = document.getElementById("scoreboardAve")
+    if ((bestTime == null) || (timeSum < bestTime)) {
+        bestTime = timeSum;
+        
+        const scoreboardBest = document.getElementById("scoreboardBest");
+        scoreboardBest.innerText = `Best: ${bestTime.toFixed(2)} s`;
+    }
 
-    scoreboardSum.textContent = `Time sum: ${timeSum} s`
-    scoreboardAve.textContent = `Average: ${timeAve} ms`
+    const scoreboardSum = document.getElementById("scoreboardSum");
+    const scoreboardAve = document.getElementById("scoreboardAve");
 
+    scoreboardSum.textContent = `Time sum: ${timeSum.toFixed(2)} s`;
+    scoreboardAve.textContent = `Average: ${timeAve.toFixed(2)} ms`;
+
+    countDown.innerText = "Waiting...";
+    
+    
 }
