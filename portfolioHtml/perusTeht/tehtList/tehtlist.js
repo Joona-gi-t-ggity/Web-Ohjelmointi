@@ -28,6 +28,7 @@ function addItem() {
     // jos uusi tehtävä ei ole tyhjä...
     if (newTask != "") {
         // lisää newTask listaan
+        for (let i = 0; i < repCount; i)
         lista.push(newTask);
         // tyhjennä input elementti
         inputBox.value = ""
