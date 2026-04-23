@@ -20,16 +20,26 @@ function updateList() {
     });
 }
 // määritä tehtävän lisäys funktio
+// ton laitoin varmistukseks että se repcount määritellään ku ei kohas toiminu
+var repCount = 1
 function addItem() {
-    // määritä input elementti...
-    // määritä newTask muutuja ottamalla input elementin tän hetkinen arvo
+    // määritä input elementit...
     const inputBox = document.getElementById("taskInput");
+    const inputCountBox = document.getElementById("countInput");
+    // talleta inputtejen arvot
     const newTask = inputBox.value;
+    repCount = Number(inputCountBox.value);
+    // varmista että repcount on ainakin 1
+    if (repCount < 1) {
+        repCount = 1
+    }
     // jos uusi tehtävä ei ole tyhjä...
     if (newTask != "") {
-        // lisää newTask listaan
-        for (let i = 0; i < repCount; i)
-        lista.push(newTask);
+        // toista repCount verran :D
+        for (let i = 0; i < repCount; i++) {
+            // lisää newTask listaan
+            lista.push(newTask);
+        }
         // tyhjennä input elementti
         inputBox.value = ""
     }
