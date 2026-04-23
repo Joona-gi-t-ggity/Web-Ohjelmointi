@@ -41,8 +41,8 @@ function addItem() {
             lista.push(newTask);
         }
         // tyhjennä input elementti
-        inputBox.value = ""
+        inputBox.value = "";
+        // kutsu listan päivitys funktio
+        updateList();
     }
-    // kutsu listan päivitys funktio
-    updateList();
 }
