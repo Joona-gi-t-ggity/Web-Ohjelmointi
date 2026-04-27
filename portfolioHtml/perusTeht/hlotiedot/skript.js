@@ -14,19 +14,19 @@ var people = [
     {
         name: "Helena Heikäläinen",
         age: 30,
-        job: "ohjelmistosuunnittelija",
+        job: "Ohjelmistosuunnittelija",
         driversLicense: false
     },
     {
         name: "Semir Sikäläinen",
         age: 18,
-        job: "opiskelija",
+        job: "Opiskelija",
         driversLicense: true
     },
     {
         name: "Tomas Täkäläinen",
         age: 22,
-        job: "linja-autonkuljettaja",
+        job: "Linja-autonkuljettaja",
         driversLicense: true
     }
 ]
@@ -56,8 +56,16 @@ function createRows() {
         var licenseTd = document.createElement("td");
         // säädä td elementtien sisäinen html
         nameTd.innerHTML = person.name;
-        ageTd.innerHTML = person.age;
-        jobTd.innerHTML = person.job;
+        if (Number(person.age) >= 18) {
+            ageTd.innerHTML = `${person.age}🍺`;
+        } else {
+            ageTd.innerHTML = person.age;
+        }
+        if (person.job.toLowerCase() == "opiskelija") {
+            jobTd.innerHTML = `${person.job}🎓`;
+        } else {
+            jobTd.innerHTML = person.job;
+        }
         licenseTd.innerHTML = person.driversLicense;
         // lisää kaikki td elementit tr elementin sisään
         row.append(nameTd, ageTd, jobTd, licenseTd);
@@ -67,5 +75,32 @@ function createRows() {
         rows.append(row);
     });
 }
+
+function processForm(e) {
+    e.preventDefault();
+    const form = e.target.form;
+
+    const name = form.nameInp.value;
+    const age = Number(form.ageInp.value);
+    const job = form.jobInp.value;
+    const license = form.licenseInp.checked;
+    if (name == "" || job == "") {
+        alert("Jokin unohtui kertoa :D");
+    } else if (age < 0) {
+        alert("Iän pitää olla positiivinen luku");
+    } else {
+        const personObj = {
+            name: name,
+            age: age,
+            job: job,
+            driversLicense: license
+        }
+        people.push(personObj)
+
+        form.reset()
+        createRows()
+    }
+}
+
 // pyöritä createRows funktio käynnistyksessä
 document.addEventListener("DOMContentLoaded", createRows());

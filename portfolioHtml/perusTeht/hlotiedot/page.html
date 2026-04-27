@@ -32,6 +32,23 @@
                 <tbody id="rows">
                 </tbody>
             </table>
+            <br>
+            <hr>
+            <form id="newDataform">
+                <label for="nameInp">Nimi:</label>
+                <input type="text" name="nameInp" id="nameInp">
+                <br>
+                <label for="ageInp">Ikä:</label>
+                <input type="number" name="ageInp" id="ageInp">
+                <br>
+                <label for="jobInp">Työ:</label>
+                <input type="text" name="jobInp" id="jobInp">
+                <br>
+                <label for="licenseInp">Omistan ajokortin:</label>
+                <input type="checkbox" name="licenseInp" id="licenseInp">
+                <br>
+                <button onclick="processForm(event)"> Lähetä </button>
+            </form>
         </main>
     </body>
 </html>
