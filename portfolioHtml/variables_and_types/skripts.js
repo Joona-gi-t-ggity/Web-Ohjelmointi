@@ -48,6 +48,7 @@ function datetimeLoad() {
     const datetime = `${date}, klo: ${time}`;
 
     const weekday = dateObj.getDay();
+    //weekdayArray[weekday]
     const month = dateObj.getMonth();
 
     var dateDiv = document.getElementById("date");
@@ -61,4 +62,71 @@ function datetimeLoad() {
     datetimeDiv.innerHTML = `Päivä ja aika = ${datetime}`;
     weekdayDiv.innerHTML = `Vikkonpäivä = ${weekdayArray[weekday]}`;
     monthDiv.innerHTML = `Kuukausi = ${monthArray[month]}`;
+}
+
+var Veijo = new Set(["luku", "poisto"]);
+var Elvira = new Set(["luku", "kirjoitus", "muokkaus"]);
+var Mehdi = new Set(["luku", "muokkaus", "poisto"]);
+var Tuuli = new Set(["kirjoitus", "poisto"]);
+
+var array_OfArrays_OfSets = [
+            [Veijo, "veijo"],
+            [Elvira, "elvira"],
+            [Mehdi, "mehdi"],
+            [Tuuli, "tuuli"]
+        ];
+
+for (set of array_OfArrays_OfSets) {
+    var fSect =  document.getElementById(set[1]);
+    var fUl = fSect.getElementsByTagName("ul")[0];
+    for (right of set[0]) {
+        var listPart = document.createElement("li");
+        listPart.innerHTML = right;
+        fUl.append(listPart);
+    }
+}
+var veituul = new Set([]);
+for (right of Veijo){
+    veituul.add(right);
+}
+for (right of Tuuli) {
+    veituul.add(right);
+}
+console.log(veituul);
+
+var mehdielvira = new Set([]);
+for (right of Mehdi) {
+    if (Elvira.has(right)) {
+        mehdielvira.add(right);
+    }
+}
+console.log(mehdielvira);
+
+var elviratuuli = new Set([]);
+for (right of Elvira) {
+    if (!Tuuli.has(right)) {
+        elviratuuli.add(right);
+    }
+}
+for (right of Tuuli) {
+    if (!Elvira.has(right)) {
+        elviratuuli.add(right);
+    }
+}
+console.log(elviratuuli);
+
+for (right of veituul) {
+    var listPart = document.createElement("li");
+    listPart.innerHTML = right;
+    document.getElementById("veijotuuli").append(listPart);
+}
+for (right of mehdielvira) {
+    var listPart = document.createElement("li");
+    listPart.innerHTML = right;
+    document.getElementById("mehdielvira").append(listPart);
+}
+for (right of elviratuuli) {
+    var listPart = document.createElement("li");
+    listPart.innerHTML = right;
+    document.getElementById("elviratuuli").append(listPart);
 }

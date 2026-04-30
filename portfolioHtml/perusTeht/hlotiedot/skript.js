@@ -38,15 +38,6 @@ function createRows() {
     rows.innerHTML = "";
     // jokaiselle ihmiselle listassa ihmiset
     people.forEach(person => {
-        // ite oisin tehy tolleen :c kun mun silmiin selvempi
-        //var row = `
-        //    <tr>
-        //        <td> ${person.name} </td>
-        //        <td> ${person.age} </td>
-        //        <td> ${person.job} </td>
-        //        <td> ${person.driversLicense} </td>
-        //    </tr>
-        //`;
         // luo tyhjä tr elementti muuttujaan row
         var row = document.createElement("tr");
         // luo tyhjät td elementit muutujiin
