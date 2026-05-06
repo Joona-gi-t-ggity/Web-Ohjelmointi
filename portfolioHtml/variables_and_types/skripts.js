@@ -1,39 +1,39 @@
 function summa(a, b) {
-    alert(`${a} + ${b} = ${a + b}`)
+    alert(`${a} + ${b} = ${a + b}`);
 }
 function vahennys(a, b) {
-    alert(`${a} - ${b} = ${a - b}`)
+    alert(`${a} - ${b} = ${a - b}`);
 }
 function kerto(a, b) {
-    alert(`${a} * ${b} = ${a * b}`)
+    alert(`${a} * ${b} = ${a * b}`);
 }
 function jako(a, b) {
-    alert(`${a} / ${b} = ${a / b}`)
+    alert(`${a} / ${b} = ${a / b}`);
 }
 
 function laskin_summa() {
     var num1 = Number(document.getElementById("number1").value);
     var num2 = Number(document.getElementById("number2").value);
 
-    summa(num1, num2)
+    summa(num1, num2);
 }
 function laskin_vahennys() {
     var num1 = Number(document.getElementById("number1").value);
     var num2 = Number(document.getElementById("number2").value);
 
-    vahennys(num1, num2)
+    vahennys(num1, num2);
 }
 function laskin_kerto() {
     var num1 = Number(document.getElementById("number1").value);
     var num2 = Number(document.getElementById("number2").value);
 
-    kerto(num1, num2)
+    kerto(num1, num2);
 }
 function laskin_jako() {
     var num1 = Number(document.getElementById("number1").value);
     var num2 = Number(document.getElementById("number2").value);
 
-    jako(num1, num2)
+    jako(num1, num2);
 }
 
 const weekdayArray = ["Sunnuntai", "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Lauantai"]
@@ -129,4 +129,50 @@ for (right of elviratuuli) {
     var listPart = document.createElement("li");
     listPart.innerHTML = right;
     document.getElementById("elviratuuli").append(listPart);
+}
+
+function absolute() {
+    var num1 = Number(document.getElementById("number1").value);
+    
+    const answer = Math.abs(num1); 
+
+    alert(`numeron ${num1} itseisarvo = ${answer}`);
+}
+function squareroot() {
+    var num1 = Number(document.getElementById("number1").value);
+    
+    const answer = Math.sqrt(num1); 
+
+    alert(`numeron ${num1} neljojuuri = ${answer}`);
+}
+function power() {
+    var num1 = Number(document.getElementById("number1").value);
+    var num2 = Number(document.getElementById("number2").value);
+
+    const answer = Math.pow(num1, num2); 
+
+    alert(`numero ${num1} korostettu numerolla ${num2} = ${answer}`);
+}
+function max() {
+    var num1 = Number(document.getElementById("number1").value);
+    var num2 = Number(document.getElementById("number2").value);
+
+    const answer = Math.max(num1, num2); 
+
+    alert(`numeroista ${num1} ja ${num2} suurempi = ${answer}`);
+}
+function min() {
+    var num1 = Number(document.getElementById("number1").value);
+    var num2 = Number(document.getElementById("number2").value);
+
+    const answer = Math.min(num1, num2); 
+
+    alert(`numeroista ${num1} ja ${num2} pienempi = ${answer}`);
+}
+function round() {
+    var num1 = Number(document.getElementById("number1").value);
+    
+    const answer = Math.round(num1); 
+
+    alert(`numero ${num1} pyöristettynä = ${answer}`);
 }
