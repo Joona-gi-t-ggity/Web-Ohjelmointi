@@ -1,0 +1,83 @@
+Lisää Kasino-sivulle painike, jossa lukee Noppa, ja sen alle tyhjä div-elementti, jolla on id noppa.
+Kirjoita koodi, joka painiketta painettaessa arpoo luvun väliltä 1 - 6, ja näyttää sen painikkeen alla olevassa div-elementissä.
+Lisää nopan jälkeen uusi painike, jossa lukee Lotto, ja sen alle tyhjä div-elementti, jonka id on lotto.
+Kirjoita koodi, joka painiketta painettaessa arpoo 7 numeroa väliltä 1 - 40, ja näyttää ne painikkeen alla olevassa div-elementissä.
+
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" href="../../media/iconDrawing.png" type="image/png">
+        <link rel="stylesheet" href="../../CSS/styles.css" id="styleSheetElem">
+
+        <title>Kasino</title>
+        <script src="./scripts.js" defer></script>
+        <style>
+            .outputBox {
+                border: 0.1em solid black;
+                padding: 0.5em;
+                width: fit-content;
+                margin-top: 0.5em;
+                margin-left: 0.5em;
+            }
+            .hWSBtn {
+                display: inline;
+                margin: 0;
+            }
+            .lottoUinStl {
+                margin: 0.5em;
+                width: 3em;
+            }
+            #lottoInputsDiv {
+                margin: 0;
+            }
+            .lablePar {
+                display: inline;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <h1> Kasino </h1>
+        </header>
+        <hr>
+        <div style="display: flex; margin-left: 0%;">
+            <nav> <!-- Nav palkki -->
+                <a href="../../subHtml/cv_sivu.html"> CV sivulle... </a>
+                <a href="../../subHtml/tyokoke.html"> Tylkokemus sivulle... </a>
+                <a href="../perusTeht/grid.html"> Portfolioon..? </a>
+            </nav>
+        </div>
+        <hr>
+        <main>
+            <section>
+                <dice>
+                    <h2 class="hWSBtn">Noppa</h2>
+                    <button onclick="diceroll('noppa')">Heitä noppaa</button>
+                    <div id="noppa" class="outputBox">0</div>
+                    <hr>
+                </dice>
+                <lotto>
+                    <h2 class="hWSBtn">Lotto</h2>
+                    <button onclick="lottorollWguess('lotto', 'corOutBox')">lotto</button>
+                    <br>
+                    
+                    <div id="lottoInputsDiv">
+                        <p class="lablePar">Lottonumerosi:</p>
+                    </div>
+                    <br>
+                    <p class="lablePar">lotto tulos:</p>
+                    <div id="lotto" class="outputBox" style="display: inline;">0, 0, 0, 0, 0, 0, 0</div>
+                    <br><br>
+                    <p class="lablePar">Oikein:</p>
+                    <div id="corOutBox" style="display: inline;">0</div>
+                    <br>
+                    <hr>
+                </lotto>
+            </section>
+        </main>
+    </body>
+</html>
