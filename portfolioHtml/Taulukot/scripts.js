@@ -55,25 +55,36 @@ function reverseTxt() {
 function reverseNum() {
     numerot.reverse();
 }
-
+// opettaja on nazi saksa ja vittu muutti tehtävän ja mut piti lisää lisä paskaaa vittu kohta jotain sattuu (siis mua koska oon masokisti ja alan runkkaa koulun vessas saatana)
+var filteredList = []
+function printFiltered(output_id) {
+    printList(output_id, filteredList);
+}
+// määritä vertaus arvo
 var comparisonValue = 0;
 function isOverN(value) {
+    // palauta onko annettu arvo on yli vertaus arvon
     return (value > comparisonValue);
 }
 function isUnderN(value) {
+    // palauta onko annettu arvo on alle vertaus arvon
     return (value < comparisonValue);
 }
 
 function filterOver(uin_id) {
+    // hae käyttäjän antama arvo
     const uinVal = Number(document.getElementById(uin_id).value);
+    // laita käyttäjän arvo vertaus arvoksi
     comparisonValue = uinVal;
-
-    numerot = numerot.filter(isOverN);
+    // tee numero listasta filtteröity numero lista käyttäen isOverN funktiota
+    filteredList = numerot.filter(isOverN);
 }
 
 function filterUnder(uin_id) {
+    // hae käyttäjän antama arvo
     const uinVal = Number(document.getElementById(uin_id).value);
+    // laita käyttäjän arvo vertaus arvoksi
     comparisonValue = uinVal;
-    
-    numerot = numerot.filter(isUnderN);
+    // tee numero listasta filtteröity numero lista käyttäen isUnderN funktiota
+    filteredList = numerot.filter(isUnderN);
 }
