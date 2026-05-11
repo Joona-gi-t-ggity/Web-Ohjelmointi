@@ -120,16 +120,22 @@ function stackParts(uinTextId, uinOnId, outputId) {
         alert("Muistathan täyttää syöttö laatikot XP paitsi vikan jos haluaa poistaa jotain :p");
         return false;
     } else {
+        // hae teksti ja mistä kohtista jaetaan
         const text = uinTextElem.value;
         const onWhat = uinOnElem.value;
-        
+        // jaa teksti listaan
         const txtAfterSplit = text.split(onWhat);
 
         if (outputElem != null) {
+            // tyhjennä ul elementti
             outputElem.innerHTML = "";
+            // joka osalle listaa jossa jaettu teksti
             txtAfterSplit.forEach(part => {
+                // tee uusi li elementti
                 var listPartElem = document.createElement("li")
+                // muuta sen sisäinen teksti listasta saatuun merkkijonoon
                 listPartElem.innerText = part
+                // lisää li elementti ul elementtiin
                 outputElem.append(listPartElem)
             });
             
